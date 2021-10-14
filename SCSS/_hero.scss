@@ -1,0 +1,47 @@
+@import './settings';
+/*--------------- Hero Styling ---------------*/
+
+#top-container {
+  text-align: center;
+  padding: 10% 5% 18%;
+  background: url('/images/asfalt-light.png') #2b3137;
+  background-size: initial;
+  color: #fff;
+
+  .container-top {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .column-top {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 12%;
+
+    }
+
+    .column-img {
+      align-items: center;
+    }
+
+  }
+}
+
+@media (min-width: 992px) {
+
+  #top-container {
+    padding: 9% 10% 12%;
+    text-align: left;
+
+    .container-top {
+      flex-direction: row;
+
+      .column-top {
+        width: 50%;
+      }
+    }
+  }
+
+}

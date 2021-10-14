@@ -1,0 +1,297 @@
+@import './settings';
+
+.kad-header {
+    display: block;
+    padding: 0px;
+    max-width: 100%;
+    background-color: $primary-color;
+    color: $white;
+    font-family: verdana;
+    position: relative;
+
+    .kad-header-logo {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .kad-mobile-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        /**** Menu Button Animation ****/
+
+        .hide-bar-two {
+            animation: bar-hide 1s linear forwards;
+        }
+
+        @keyframes bar-hide {
+
+            0% {
+                width: 0px;
+                height: 0px;
+            }
+
+            100% {
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        .cross-bar-one {
+            animation: bar-cross-left 0.5s linear forwards;
+        }
+
+        @keyframes bar-cross-left {
+            10% {
+                transform: rotate(45deg) translate(4px, 4px);
+            }
+
+            50% {
+                transform: rotate(45deg) translate(7px, 7px);
+            }
+
+            100% {
+                transform: rotate(45deg) translate(3px, 2px);
+            }
+        }
+
+        .cross-bar-three {
+            animation: bar-cross-right 0.5s linear forwards;
+        }
+
+        @keyframes bar-cross-right {
+            10% {
+                transform: rotate(-45deg);
+            }
+
+            60% {
+                transform: rotate(-45deg) translate(-3px, 3px);
+            }
+
+            100% {
+                transform: rotate(-45deg) translate(1px, -2px);
+            }
+        }
+
+
+    }
+
+    .kad-nav {
+        display: none;
+        position: static;
+        text-align: center;
+
+        .kad-nav-list {
+            margin: 0;
+            padding: 0;
+
+            .kad-nav-list-item {
+                list-style: none;
+                float: none;
+                padding: 2% 5%;
+            }
+
+        }
+
+
+        .kad-nav-extras {
+            display: block;
+            position: static;
+            padding: 2% 0;
+
+            .kad-nav-button {
+                margin: 0 0 0 0;
+
+                &:hover {
+                    background-color: $green;
+                    border: 1px solid $green;
+                    color: $white;
+                }
+            }
+
+            .kad-nav-icons {
+
+                color: #e4dcdc;
+
+
+                &:hover {
+                    color: #bababa;
+                }
+            }
+        }
+
+    }
+
+    /**** Nav Animation ****/
+
+    .toggle-kad-nav {
+        display: block;
+        padding: 0 0 20px;
+
+        .kad-nav-list {
+            margin: 0;
+            padding: 0;
+
+            .kad-nav-list-item {
+                list-style: none;
+                float: none;
+                padding: 2% 5%;
+            }
+        }
+
+    }
+
+    .kad-menu-bar {
+        background-color: #dedcdc;
+        width: 1.5rem;
+        height: 2px;
+        margin: 4px 0;
+        padding: 0;
+    }
+
+    .kad-nav-extras {
+
+        .kad-nav-button {
+            background-color: transparent;
+            border: 1px solid $white;
+            color: $white;
+            border-radius: 100px;
+            padding: 0.5rem 0.9rem;
+            margin: 0 0 0 20px;
+
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: $green;
+                border: 1px solid $green;
+                color: $white;
+            }
+        }
+
+        .kad-nav-icons {
+            padding: 20px 0;
+
+            a {
+                color: #bababa;
+                padding: 20px 5px;
+
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+/************ Transparent Header ************/
+
+.kad-header-transparent {
+    background-color: transparent;
+    color: $primary-color;
+
+    .kad-link {
+        color: $primary-color;
+
+        &:hover {
+            color: #6a6b70;
+        }
+    }
+
+    .kad-menu-bar {
+        background-color: $primary-color;
+    }
+
+}
+
+
+
+@media (min-width: 982px) {
+    .kad-header {
+        /*header backgroung color can be replaced with color of choice*/
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .kad-header-logo {
+            display: inline-block;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .kad-menu-button {
+            display: none;
+        }
+
+        .kad-nav {
+            display: flex;
+            align-items: center;
+
+            .kad-nav-list {
+                margin: 0;
+                padding-left: 0px;
+
+                .kad-nav-list-item {
+                    list-style: none;
+                    float: left;
+                    padding: 0 20px;
+
+                    .kad-list-link {
+                        font-size: 0.88rem;
+
+                        &:hover {
+                            color: #bababa;
+                        }
+                    }
+                }
+            }
+
+            .kad-nav-extras {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                position: absolute;
+                right: 2%;
+
+                .kad-nav-button {
+                    background-color: transparent;
+                    border: 1px solid $white;
+                    color: $white;
+                    border-radius: 100px;
+                    padding: 0.5rem 0.9rem;
+                    margin: 0 0 0 20px;
+                }
+
+            }
+
+            .kad-nav-icons {
+                padding: 0;
+
+                a {
+                    color: #bababa;
+                    padding: 0 5px;
+
+
+
+                }
+            }
+
+        }
+
+    }
+}
